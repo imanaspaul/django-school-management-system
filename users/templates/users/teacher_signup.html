@@ -1,0 +1,35 @@
+{% extends "users/base.html" %}
+{% block content %}
+
+  <div class='container mt-4'>
+    <h1 class='text-center'>Teacher Signup</h1>
+  
+   <form method='POST'>
+   {% csrf_token %}
+        <div class="form-group">
+            <label for="exampleInputEmail1">Full Name</label>
+            <input required='true' type="text" name='fullname' class="form-control" id="name" aria-describedby="emailHelp" placeholder="Enter email">
+        </div>
+        <div class="form-group">
+            <label for="exampleInputEmail1">Email address</label>
+            <input required='true' type="email" name='email' class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+        </div>
+        <div class="form-group">
+            <label for="exampleInputPassword1">Password</label>
+            <input required='true' type="password" name='password' class="form-control" id="exampleInputPassword1" placeholder="Password">
+        </div>
+         <div class="form-group">
+            <label for="exampleInputPassword1">Password</label>
+            <input required='true' type="password" name='password2' class="form-control" id="exampleInputPassword2" placeholder="Password">
+        </div>
+        <div class="form-group form-check">
+            <input required='false' name='fromchek' type="checkbox" class="form-check-input" id="exampleCheck1">
+            <label class="form-check-label" for="exampleCheck1">Do you wants to get notifications?</label>
+        </div>
+        <button type="submit" class="form-control btn btn-primary">Sign up</button>
+    </form>
+    </div>
+
+
+    {% endblock %}

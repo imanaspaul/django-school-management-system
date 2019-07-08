@@ -1,0 +1,1 @@
+# Django school management system
